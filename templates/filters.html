@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Automated Gmail Filters</title>
+</head>
+<body>
+<h1>Filters</h1>
+<table>
+<thead>
+<tr>
+<th>Sender address</th>
+<th>Subject line</th>
+<th>Body keywords</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for filter in filters %}
+<tr>
+<td>{{ filter.criteria.from }}</td>
+<td>{{ filter.criteria.subject }}</td>
+<td>{{ filter.criteria.body }}</td>
+<td>{{ filter.action.forward }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
