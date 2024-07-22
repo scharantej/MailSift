@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Automated Gmail Filters</title>
+</head>
+<body>
+<h1>Create a new filter</h1>
+<form action="{% url_for('create_filter') %}" method="post">
+<label for="sender_address">Sender address:</label>
+<input type="text" name="sender_address">
+<br>
+<label for="subject_line">Subject line:</label>
+<input type="text" name="subject_line">
+<br>
+<label for="body_keywords">Body keywords:</label>
+<input type="text" name="body_keywords">
+<br>
+<input type="submit" value="Create filter">
+</form>
+</body>
+</html>
+
+
